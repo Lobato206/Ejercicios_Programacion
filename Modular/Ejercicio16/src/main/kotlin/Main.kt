@@ -4,6 +4,8 @@ fun main() {
     var hora = pedirHora("Dame la hora:", 0, 24)
     var minutos=pedirHora("Dame los minutos: ", 0, 59)
     var segundos=pedirHora("Dame los segundos: ", 0, 59)
+    segundos+=1
+    calculo(hora, minutos, segundos)
 }
 fun pedirHora(mensaje:String, vmin:Int, vmax:Int):Int{
     var num=0
@@ -11,9 +13,23 @@ fun pedirHora(mensaje:String, vmin:Int, vmax:Int):Int{
         print(mensaje)
         num=readln().toInt()
         if ((num<vmin)||(num>vmax)) println("Solo horas desde las 0 a las 23")
-    }while((num<vmin||(num>vmax))
+    }while((num<vmin)||(num>vmax))
     return num
 }
 fun calculo(hora:Int, minuto:Int, segundo:Int){
-
+    var m=minuto
+    var s=segundo
+    var h=hora
+    if(s>=60){
+        m=m+1
+        s=0
+        if(m>=60){
+            h=h+1
+            m=0
+            if(h>=24){
+                h=0
+            }
+        }
+    }
+    println("La hora es:  $h : $m : $s")
 }

@@ -4,7 +4,7 @@ fun main() {
     println("Introduce el numero:")
     var num = readln().toDouble()
 
-    if (){
+    while(num)
 
 
     }

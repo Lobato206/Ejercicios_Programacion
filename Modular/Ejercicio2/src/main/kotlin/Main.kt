@@ -1,5 +1,3 @@
-import kotlin.math.PI
-
 val VALOR_PI=3.14
 fun main() {
 
