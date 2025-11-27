@@ -25,4 +25,4 @@ rellenar(v2, 2, 8)
 fun rellenar (s:Array<Int>, indice:Int, valor:Int){
 if (indice<s.size){
 s[indice]=valor
-}/
+}*/
