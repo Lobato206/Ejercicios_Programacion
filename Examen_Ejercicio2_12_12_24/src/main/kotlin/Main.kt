@@ -4,6 +4,7 @@ const val N_PISTOLERO = 5
 const val VALOR = 3
 fun main() {
     var valores = Array(N_PISTOLERO) { Array<Int>(VALOR) { 0 } }
+    var p=valores.size
     var pist1 = 0
     var pist2 = 1
     var puntos: Array<Int> = Array(N_PISTOLERO) { 0 }
@@ -21,7 +22,6 @@ fun main() {
         x++
     }
 
-    println(rellenarPuntos(puntos, pist1))
 
 }
 
@@ -37,10 +37,10 @@ fun rellenarValores(valor: Array<Array<Int>>) {
         x++
     }
 }
-fun rellenarPuntos(valor: Array<Int>, puntos:Array<Array<Int>>, pistolero: Int){
+/*fun rellenarPuntos(valor: Array<Int>, puntos:Array<Array<Int>>){
     var y = 0
-    valor[pistolero]=calcularPuntos(puntos, pistolero)
-}
+    valor[y]=calcularPuntos(puntos, y)
+}*/
 
 fun calcularPuntos(valor: Array<Array<Int>>, pistolero: Int): Int {
     var y = 0
